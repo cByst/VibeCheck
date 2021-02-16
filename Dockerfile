@@ -12,6 +12,10 @@ RUN echo "vibecheck:x:9090:vibecheck" > ./group
 
 FROM scratch
 
+COPY --from=builder /vibecheck/passwd /etc/passwd
+
+COPY --from=builder /vibecheck/group /etc/group
+
 COPY --from=builder /vibecheck/main /
 
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
