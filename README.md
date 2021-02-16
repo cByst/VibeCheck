@@ -1,1 +1,1 @@
-# VibeCheck
+# Vibe Check - Discord Bot
